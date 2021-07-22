@@ -12,7 +12,6 @@ function index(req, res) {
   Anime.find({})
   .then(Animes => {
     res.status(200).json(Animes)
-    res.render('index', { title: 'Anime' })
   })
   .catch(err => {
     res.json(err)
